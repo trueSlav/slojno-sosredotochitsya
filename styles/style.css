@@ -1,5 +1,20 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Стили для темной темы */
+/* Перенести в dark.css */
+:root {
+	--bg-color: #000028;
+	--text-color: #f1b2ce;
+	--accent-color: #ff0070;
+	--main-font: IBM Plex mono;
+}
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+	font-family: var(--main-font, sans-serif);
+	color: var(--text-color, #f1b2ce);
+	background-color: var(--bg-color, #000028);
+	font-size: 18px;
+	padding: 0 10px;
+}
+
+.header__title {
+	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
