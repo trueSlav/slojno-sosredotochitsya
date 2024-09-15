@@ -3,6 +3,8 @@
 :root {
 	--bg-color: #000028;
 	--text-color: #f1b2ce;
+	--text-color-title: #db00ff;
+	--text-color-title-decor: #000028;
 	--accent-color: #ff0070;
 	--main-font: IBM Plex mono;
 }
@@ -14,6 +16,30 @@
 	font-size: 18px;
 	padding: 10px;
 	font-weight: 400;
+}
+
+/* разобраться как они вычислили fz */
+.title {
+	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+	color: var(--text-color-title, #db00ff);
+	font-weight: 700;
+	font-size: 116px;
+	line-height: 83%;
+	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+}
+
+.title-decor {
+	font-weight: 700;
+	color: var(--text-color-title-decor, #000028);
+	background-color: var(--accent-color, #ff0070);
+}
+
+.title-decor_fw-400 {
+	font-weight: 400;
+}
+
+.decorate-rec {
+	display: contents;
 }
 
 .decorate-rec::after {
@@ -52,20 +78,23 @@
 	content: '';
 	width: 25px;
 	height: 25px;
+	margin-top: 10%;
 	border-bottom: 1px solid var(--accent-color, #ff0070);
 	border-left: 1px solid var(--accent-color, #ff0070);
 }
 
 .header {
+	height: 100vh;
 	position: relative;
 	display: grid;
-	grid-template: repeat(auto, 3) / 1fr;
+	grid-template: 0 min-content fit-content(120px) / 1fr;
 	grid-auto-rows: min-content;
 }
 
 .header__theme-menu {
+	max-height: 100px;
 	justify-self: end;
-	margin-top: 40px;
+	margin-top: 17%;
 }
 
 .header__theme-menu-item:not(:last-of-type) {
@@ -86,9 +115,14 @@
 	border: 1px solid #ff0070;
 }
 
-/* разобраться как они вычислили fz */
 .header__title {
-	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-	color: #db00ff;
-	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+	margin-top: 19%;
+}
+
+/* при увеличении экрана сделать ширину 50% */
+/* ??? сделать чтобы плавно блок имел фиксированную ширину ??? */
+.header__subtitle {
+	margin-top: 15%;
+	line-height: 130%;
+	justify-self: end;
 }
