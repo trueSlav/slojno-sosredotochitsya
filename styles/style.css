@@ -13,6 +13,11 @@
 	font-family: var(--main-font, sans-serif);
 	color: var(--text-color, #f1b2ce);
 	background-color: var(--bg-color, #000028);
+	background-image: url(../images/cover-image-dark.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 	font-size: 18px;
 	padding: 10px;
 	font-weight: 400;
@@ -23,7 +28,7 @@
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	color: var(--text-color-title, #db00ff);
 	font-weight: 700;
-	font-size: 116px;
+	/* font-size: 116px; */
 	line-height: 83%;
 	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
@@ -67,7 +72,10 @@
 
 .decorated-zone::before {
 	content: '';
-	justify-self: end;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* justify-self: end; */
 	width: 25px;
 	height: 25px;
 	border-top: 1px solid var(--accent-color, #ff0070);
@@ -76,9 +84,12 @@
 
 .decorated-zone::after {
 	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	width: 25px;
 	height: 25px;
-	margin-top: 10%;
+	/* margin-top: 10%; */
 	border-bottom: 1px solid var(--accent-color, #ff0070);
 	border-left: 1px solid var(--accent-color, #ff0070);
 }
@@ -87,7 +98,7 @@
 	height: 100vh;
 	position: relative;
 	display: grid;
-	grid-template: 0 min-content fit-content(120px) / 1fr;
+	grid-template: min-content /1fr;
 	grid-auto-rows: min-content;
 }
 
@@ -125,4 +136,60 @@
 	margin-top: 15%;
 	line-height: 130%;
 	justify-self: end;
+}
+
+/* ----- MAIN ----- */
+
+.main {
+	padding-top: 47px;
+}
+
+/* задать закомментированные значения в медиазапросах!!!!! */
+
+/* у каждого блока секкции будет модификатор, который меняет его поведение (или исключительно медиазапрос????) */
+.section {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-bottom: 50px;
+	/* grid-auto-flow: column; */
+	/* grid-auto-columns: fit-content(70vi); */
+}
+
+.section__title {
+	font-size: 18px;
+	color: var(--accent-color, #ff0070);
+	margin-bottom: 22px;
+}
+
+.section__list {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+}
+
+.article-title {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.section>p {
+	margin-bottom: 20px;
+}
+
+.section__list_image-block {
+	display: grid;
+	grid-template-rows: 146px 355px 237px 355px 237px;
+	gap: 10px;
+}
+
+.footer {
+	position: relative;
+	/* padding-top: 10px; */
+	height: 99vh;
+	display: grid;
+	place-content: center;
+}
+
+.footer__title {
+	text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
