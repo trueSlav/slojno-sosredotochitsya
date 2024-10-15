@@ -1,35 +1,19 @@
-/* Стили для темной темы */
-/* Перенести в dark.css */
-:root {
-	--bg-color: #000028;
-	--text-color: #f1b2ce;
-	--text-color-title: #db00ff;
-	--text-color-title-decor: #000028;
-	--accent-color: #ff0070;
-	--main-font: IBM Plex mono;
-}
-
+/*написать инструкцию по шорткату backgroun */
 .page {
-	font-family: var(--main-font, sans-serif);
+	font: 400 1.125rem/1.29 var(--main-font, sans-serif);
 	color: var(--text-color, #f1b2ce);
-	background-color: var(--bg-color, #000028);
-	background-image: url(../images/cover-image-dark.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: url(../images/cover-image-dark.png) center/cover no-repeat;
 	background-attachment: fixed;
-	font-size: 18px;
-	padding: 10px;
-	font-weight: 400;
+	background-color: var(--bg-color, #000028);
+	padding: 2.666vi
 }
 
-/* разобраться как они вычислили fz */
+/* TITLE разобраться как они вычислили fz */
 .title {
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	color: var(--text-color-title, #db00ff);
 	font-weight: 700;
-	/* font-size: 116px; */
-	line-height: 83%;
+	line-height: 0.83;
 	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
@@ -42,6 +26,8 @@
 .title-decor_fw-400 {
 	font-weight: 400;
 }
+
+/* Точка в левом верхнем углу */
 
 .decorate-rec {
 	display: contents;
@@ -75,7 +61,6 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	/* justify-self: end; */
 	width: 25px;
 	height: 25px;
 	border-top: 1px solid var(--accent-color, #ff0070);
@@ -89,17 +74,33 @@
 	left: 0;
 	width: 25px;
 	height: 25px;
-	/* margin-top: 10%; */
 	border-bottom: 1px solid var(--accent-color, #ff0070);
 	border-left: 1px solid var(--accent-color, #ff0070);
 }
+
+.link-decor {
+	position: relative;
+	text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+}
+
+.link-decor::after {
+	content: '';
+	position: absolute;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--text-color, #f1b2ce);
+}
+
+/* HEADER */
 
 .header {
 	height: 100vh;
 	position: relative;
 	display: grid;
-	grid-template: min-content /1fr;
-	grid-auto-rows: min-content;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
 }
 
 .header__theme-menu {
@@ -109,7 +110,7 @@
 }
 
 .header__theme-menu-item:not(:last-of-type) {
-	margin-bottom: 11.5px;
+	margin-block-end: 11px;
 }
 
 .header__theme-menu-button {
@@ -127,21 +128,27 @@
 }
 
 .header__title {
-	margin-top: 19%;
+	/* margin-top: 19%; */
+	padding-block-start: 4%;
 }
 
 /* при увеличении экрана сделать ширину 50% */
 /* ??? сделать чтобы плавно блок имел фиксированную ширину ??? */
 .header__subtitle {
-	margin-top: 15%;
-	line-height: 130%;
-	justify-self: end;
+	/* margin-top: 15%;
+	line-height: 130%; */
+	/* padding-block-start: 15%; */
+	align-self: center;
+	margin-block-end: 20px;
+	max-height: 117px;
+	/* justify-self: end; */
 }
 
 /* ----- MAIN ----- */
 
 .main {
-	padding-top: 47px;
+	/* padding-top: 47px; */
+	padding-block-start: 47px;
 }
 
 /* задать закомментированные значения в медиазапросах!!!!! */
@@ -149,16 +156,17 @@
 /* у каждого блока секкции будет модификатор, который меняет его поведение (или исключительно медиазапрос????) */
 .section {
 	display: grid;
-	grid-template-columns: 1fr;
-	margin-bottom: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+	padding-block-end: 50px;
 	/* grid-auto-flow: column; */
 	/* grid-auto-columns: fit-content(70vi); */
 }
 
 .section__title {
-	font-size: 18px;
+	font-size: 1em;
 	color: var(--accent-color, #ff0070);
-	margin-bottom: 22px;
+	padding-block-end: 22px;
+	/* margin-bottom: 22px; */
 }
 
 .section__list {
@@ -168,19 +176,51 @@
 }
 
 .article-title {
-	font-size: 18px;
-	margin-bottom: 10px;
+	font-size: 1em;
+	/* margin-bottom: 10px; */
+	margin-block-end: 10px;
 }
 
-.section>p {
-	margin-bottom: 20px;
+.section__subtitle {
+	/* margin-bottom: 20px; */
+	margin-block-end: 20px;
+}
+
+.section_image-block {
+	grid-template-columns: none;
 }
 
 .section__list_image-block {
 	display: grid;
-	grid-template-rows: 146px 355px 237px 355px 237px;
+	/* grid-template-rows: 142px 355px 237px 355px 237px; */
+	grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+	grid-template-rows: repeat(auto, fit-content(1fr));
 	gap: 10px;
 }
+
+.section__list_image-block .section__item_image-wrapper:first-of-type {
+	max-height: 142px;
+}
+
+.section__list_image-block .section__item_image-wrapper:nth-of-type(2) {
+	max-height: 355px;
+}
+
+.section__list_image-block .section__item_image-wrapper:nth-of-type(3) {
+	max-height: 236px;
+}
+
+.section__list_image-block .section__item_image-wrapper:nth-of-type(4) {
+	max-height: 356px;
+}
+
+.section__list_image-block .section__item_image-wrapper:last-of-type {
+	max-height: 237px;
+}
+
+/* .section__item {
+	padding-block-end: .6rem;
+} */
 
 .footer {
 	position: relative;

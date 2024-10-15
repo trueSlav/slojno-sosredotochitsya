@@ -5,8 +5,42 @@
 */
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
+	/* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+	/* 
+	--bg-color: #000028;
+	--text-color: red;
+	--text-color-title: #db00ff;
+	--text-color-title-decor: #000028;
+	--accent-color: #ff0070;
+	--main-font: IBM Plex mono; */
+
+
 }
+
+
+:root.theme-light {
+	--bg-color: #000028;
+	--text-color: red;
+	--text-color-title: #db00ff;
+	--text-color-title-decor: #000028;
+	--accent-color: #ff0070;
+	--main-font: IBM Plex mono;
+}
+
+/* Остальные стили */
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #000028;
+		--text-color: red;
+		--text-color-title: #db00ff;
+		--text-color-title-decor: #000028;
+		--accent-color: #ff0070;
+		--main-font: IBM Plex mono;
+	}
+}
+
+/* Остальные стили */
