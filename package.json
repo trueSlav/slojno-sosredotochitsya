@@ -1,0 +1,21 @@
+{
+  "name": "slozhno-sosredotochitsya",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'hello'",
+		"lint" : "stylelint **/*.css",
+		"check" : "prettier --check './**/*.{html,css,js}'",
+		"write" : "prettier --write './**/*.{html,css,js}'",
+		"lintfix" : "stylelint **/*.css --fix",
+		"checkAll" : "npm run lint && npm run check",
+		"fixAll" : "npm run write && npm run lintfix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "stylelint": "^16.10.0"
+  }
+}

@@ -1,14 +1,16 @@
 /*написать инструкцию по шорткату backgroun */
+
 .page {
 	font: 400 1.125rem/1.29 var(--main-font, sans-serif);
 	color: var(--text-color, #f1b2ce);
 	background: var(--background-image, '../images/cover-image-dark.png') center/cover no-repeat;
 	background-attachment: fixed;
 	background-color: var(--bg-color, #000028);
-	padding: 2.666vi
+	padding: 2.666vi;
 }
 
 /* TITLE разобраться как они вычислили fz */
+
 .title {
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	color: var(--text-color-title, #db00ff);
@@ -135,7 +137,7 @@
 }
 
 .header__theme-menu-button:hover {
-	outline: 1px solid rgb(225 0 112 / .4);
+	outline: 1px solid rgb(225 0 112 / 0.4);
 }
 
 .header__theme-menu-button:focus {
@@ -158,6 +160,7 @@
 
 /* при увеличении экрана сделать ширину 50% */
 /* ??? сделать чтобы плавно блок имел фиксированную ширину ??? */
+
 .header__subtitle {
 	/* margin-top: 15%;
 	line-height: 130%; */
@@ -178,6 +181,7 @@
 /* задать закомментированные значения в медиазапросах!!!!! */
 
 /* у каждого блока секкции будет модификатор, который меняет его поведение (или исключительно медиазапрос????) */
+
 .section {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -257,6 +261,7 @@
 /* media */
 
 @media (768px <=width) {
+
 	.title {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
@@ -288,6 +293,10 @@
 		padding-block-start: 5rem;
 	}
 
+	.section__list {
+		gap: 23px 0;
+	}
+
 	.section:first-of-type {
 		grid-template-columns: 30% 70%;
 		padding-block-end: 81px;
@@ -315,10 +324,6 @@
 	.section__subtitle {
 		margin-inline: 22px 13px;
 		height: 1.5rem;
-	}
-
-	.section__list {
-		gap: 23px 0;
 	}
 
 	.section:nth-child(3) .section__list {
@@ -381,6 +386,7 @@
 }
 
 @media (1024px <=width) {
+
 	.page {
 		padding: 20px;
 	}
@@ -464,5 +470,4 @@
 	.footer {
 		min-height: 728px;
 	}
-
 }
