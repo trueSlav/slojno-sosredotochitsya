@@ -1,8 +1,21 @@
 :root {
 	--bg-color: #000028;
+
+	/* цвет текста в параграфе / преобладающего текста */
 	--text-color: #f1b2ce;
+
+	/* цвет большого заголовка */
 	--text-color-title: #db00ff;
+
+	/* цвет текста в декорированном заголовке */
 	--text-color-title-decor: #000028;
+
+	--section-title-color: #ff0070;
+
 	--accent-color: #ff0070;
 	--main-font: IBM Plex mono;
+
+	--background-image: url(../images/cover-image-dark.png);
+
+	--button-color: #ff0070;
 }

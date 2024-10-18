@@ -2,7 +2,7 @@
 .page {
 	font: 400 1.125rem/1.29 var(--main-font, sans-serif);
 	color: var(--text-color, #f1b2ce);
-	background: url(../images/cover-image-dark.png) center/cover no-repeat;
+	background: var(--background-image, '../images/cover-image-dark.png') center/cover no-repeat;
 	background-attachment: fixed;
 	background-color: var(--bg-color, #000028);
 	padding: 2.666vi
@@ -14,7 +14,7 @@
 	color: var(--text-color-title, #db00ff);
 	font-weight: 700;
 	line-height: 0.83;
-	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+	text-shadow: 4px 4px 0 #ff0070;
 }
 
 .title-decor {
@@ -37,20 +37,20 @@
 	content: 'REC';
 	display: inline-block;
 	position: absolute;
-	top: 0;
-	right: 30px;
+	inset-block-start: 0;
+	inset-inline-end: 30px;
 	color: var(--accent-color, #ff0070);
 }
 
 .decorate-rec::before {
 	content: '';
 	position: absolute;
-	top: 9px;
-	right: 10px;
+	inset-block-start: 9px;
+	inset-inline-end: 10px;
 	display: inline-block;
 	width: 9px;
 	height: 9px;
-	margin-left: 10px;
+	margin-inline-start: 10px;
 	border-radius: 100%;
 	background-color: var(--accent-color, #ff0070);
 	box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
@@ -59,23 +59,23 @@
 .decorated-zone::before {
 	content: '';
 	position: absolute;
-	top: 0;
-	right: 0;
+	inset-block-start: 0;
+	inset-inline-end: 0;
 	width: 25px;
 	height: 25px;
-	border-top: 1px solid var(--accent-color, #ff0070);
-	border-right: 1px solid var(--accent-color, #ff0070);
+	border-block-start: 1px solid var(--accent-color, #ff0070);
+	border-inline-end: 1px solid var(--accent-color, #ff0070);
 }
 
 .decorated-zone::after {
 	content: '';
 	position: absolute;
-	bottom: 0;
-	left: 0;
+	inset-block-end: 0;
+	inset-inline-start: 0;
 	width: 25px;
 	height: 25px;
-	border-bottom: 1px solid var(--accent-color, #ff0070);
-	border-left: 1px solid var(--accent-color, #ff0070);
+	border-block-end: 1px solid var(--accent-color, #ff0070);
+	border-inline-start: 1px solid var(--accent-color, #ff0070);
 }
 
 .link-decor {
@@ -83,14 +83,18 @@
 	text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 
-.link-decor::after {
+.link-decor:hover::after {
 	content: '';
 	position: absolute;
 	inset-block-end: 0;
 	inset-inline-start: 0;
 	width: 100%;
-	height: 2px;
+	height: 1px;
 	background-color: var(--text-color, #f1b2ce);
+}
+
+.link-decor:focus {
+	outline: 1px solid var(--text-color, #f1b2ce);
 }
 
 /* HEADERr */
@@ -115,21 +119,40 @@
 }
 
 .header__theme-menu-button {
+	position: relative;
 	vertical-align: middle;
 	text-align: center;
 	text-transform: lowercase;
-	color: var(--accent-color, #ff0070);
+	color: var(--button-color, #ff0070);
 	padding-inline: 13px;
 	min-width: 70px;
 	min-height: 26px;
 }
 
 .header__theme-menu-button_active {
-	border: 1px solid #ff0070;
+	outline: 1px solid var(--button-color, #ff0070);
+	pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+	outline: 1px solid rgb(225 0 112 / .4);
+}
+
+.header__theme-menu-button:focus {
+	outline: transparent;
+}
+
+.header__theme-menu-button:focus-visible::before {
+	content: '';
+	position: absolute;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--button-color, #ff0070);
 }
 
 .header__title {
-	/* margin-top: 19%; */
 	padding-block-start: 4%;
 }
 
@@ -165,7 +188,7 @@
 
 .section__title {
 	font-size: 1em;
-	color: var(--accent-color, #ff0070);
+	color: var(--section-title-color, #ff0070);
 	padding-block-end: 22px;
 	/* margin-bottom: 22px; */
 }
@@ -218,10 +241,6 @@
 .section__list_image-block .section__item_image-wrapper:last-of-type {
 	max-height: 237px;
 }
-
-/* .section__item {
-	padding-block-end: .6rem;
-} */
 
 .footer {
 	position: relative;
