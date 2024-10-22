@@ -18,4 +18,7 @@
 	--background-image: url(../images/cover-image-dark.png);
 
 	--button-color: #ff0070;
+
+	--section-padding-mobile: 50px;
+	--section-padding-large: 80px;
 }
