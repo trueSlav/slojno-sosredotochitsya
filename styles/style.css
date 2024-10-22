@@ -1,5 +1,3 @@
-/*написать инструкцию по шорткату backgroun */
-
 .page {
 	font: 400 1.125rem/1.29 var(--main-font, sans-serif);
 	color: var(--text-color, #f1b2ce);
@@ -8,8 +6,6 @@
 	background-color: var(--bg-color, #000028);
 	padding: 10px;
 }
-
-/* TITLE разобраться как они вычислили fz */
 
 .title {
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -32,8 +28,6 @@
 .title-decor_fw-400 {
 	font-weight: 400;
 }
-
-/* Точка в левом верхнем углу */
 
 .decorate-rec {
 	display: contents;
@@ -103,14 +97,11 @@
 	outline: 1px solid var(--text-color, #f1b2ce);
 }
 
-/* HEADERr */
-
 .header {
 	min-height: 100lvh;
 	position: relative;
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
-	/* grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); */
 }
 
 .header__theme-menu {
@@ -161,43 +152,26 @@
 	padding-block-start: 4%;
 }
 
-/* при увеличении экрана сделать ширину 50% */
-/* ??? сделать чтобы плавно блок имел фиксированную ширину ??? */
-
 .header__subtitle {
-	/* margin-top: 15%;
-	line-height: 130%; */
-	/* padding-block-start: 15%; */
 	align-self: center;
 	margin-block-end: 20px;
 	max-height: 117px;
-	/* justify-self: end; */
 }
-
-/* ----- MAIN ----- */
 
 .main {
-	/* padding-top: 47px; */
 	padding-block-start: 47px;
 }
-
-/* задать закомментированные значения в медиазапросах!!!!! */
-
-/* у каждого блока секкции будет модификатор, который меняет его поведение (или исключительно медиазапрос????) */
 
 .section {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
 	padding-block-end: 50px;
-	/* grid-auto-flow: column; */
-	/* grid-auto-columns: fit-content(70vi); */
 }
 
 .section__title {
 	font-size: 1em;
 	color: var(--section-title-color, #ff0070);
 	padding-block-end: 22px;
-	/* margin-bottom: 22px; */
 }
 
 .section__list {
@@ -221,7 +195,6 @@
 
 .section__list_image-block {
 	display: grid;
-	/* grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); */
 	grid-template-rows: repeat(auto, fit-content(1fr));
 	gap: 10px;
 }
@@ -252,8 +225,6 @@
 	display: grid;
 	place-content: center;
 }
-
-/* media */
 
 @media (768px <=width) {
 
@@ -288,8 +259,6 @@
 		align-self: start;
 		margin-block-start: 6.6%;
 	}
-
-	/* MAIN */
 
 	.main {
 		padding-block-start: 80px;
@@ -345,9 +314,6 @@
 		gap: 20px;
 		grid-template-rows: 26% 31.5%;
 		grid-template-columns: repeat(3, 31.5%);
-		/* grid-auto-flow: row dense; */
-		/* grid-template-columns: repeat(auto-fill, 230px); */
-		/* grid-template-rows: repeat(auto-fill, min(11%, 100%)); */
 	}
 
 	.section__list_image-block .section__item_image-wrapper:first-of-type {
@@ -363,12 +329,9 @@
 	}
 
 	.section__list_image-block .section__item_image-wrapper:nth-of-type(3) {
-		/* grid-row: span 2; */
 		grid-row-start: span 2;
 		grid-column: 1/2;
 		min-height: 100%;
-		/* min-height: 568px;
-		width: 229px; */
 	}
 
 	.section__list_image-block .section__item_image-wrapper:nth-of-type(4) {
@@ -393,7 +356,6 @@
 	}
 
 	.header {
-		/* padding-block-end: 5.1rem; */
 		height: 728px;
 		min-height: 100vh;
 	}

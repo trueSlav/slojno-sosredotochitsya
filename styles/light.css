@@ -1,20 +1,12 @@
 .page.theme_light {
 	--bg-color: #fff1f7;
 	--background-image: url(../images/cover-image-light.png);
-	/* цвет текста в параграфе / преобладающего текста */
 	--text-color: #353430;
-
-	/* цвет большого заголовка */
 	--text-color-title: #ffc2e6;
-
-	/* цвет текста в декорированном заголовке */
 	--text-color-title-decor: #353430;
-
 	--section-title-color: #353430;
-
 	--accent-color: #ff8dcb;
 	--main-font: ibm plex mono;
-
 	--button-color: #353430;
 }
 
@@ -35,7 +27,6 @@
 		--text-color-title-decor: #353430;
 		--accent-color: #ff8dcb;
 		--main-font: ibm plex mono;
-
 		--background-image: url(../images/cover-image-light.png);
 		--button-active-color: #353430;
 	}
