@@ -8,11 +8,14 @@
 	--accent-color: #ff8dcb;
 	--main-font: ibm plex mono;
 	--button-color: #353430;
+	--decorated-zone-color: #353430;
 }
 
 .page.theme_light .decorate-rec {
 	display: none;
 }
+
+
 
 .page.theme_light .header__theme-menu-button:hover {
 	outline: 1px solid rgb(50 49 45 / 0.4);
@@ -22,16 +25,18 @@
 
 	:root {
 		--bg-color: #fff1f7;
+		--background-image: url(../images/cover-image-light.png);
 		--text-color: #353430;
 		--text-color-title: #ffc2e6;
 		--text-color-title-decor: #353430;
+		--section-title-color: #353430;
 		--accent-color: #ff8dcb;
 		--main-font: ibm plex mono;
-		--background-image: url(../images/cover-image-light.png);
-		--button-active-color: #353430;
+		--button-color: #353430;
+		--decorated-zone-color: #353430;
 	}
 
-	.decorate-rec {
+	.page.theme_auto .decorate-rec {
 		display: none;
 	}
 

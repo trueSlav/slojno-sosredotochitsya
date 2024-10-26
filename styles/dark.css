@@ -3,8 +3,12 @@
 	--text-color: #f1b2ce;
 	--text-color-title: #db00ff;
 	--text-color-title-decor: #000028;
+	--section-title-color: #ff0070;
 	--accent-color: #ff0070;
 	--main-font: ibm plex mono;
+	--background-image: url(../images/cover-image-dark.png);
+	--button-color: #ff0070;
+	--decorated-zone-color: #ff0070;
 }
 
 .decorate-rec {
