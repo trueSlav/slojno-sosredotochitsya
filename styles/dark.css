@@ -14,3 +14,7 @@
 .decorate-rec {
 	display: contents;
 }
+
+.page.theme_dark .header__theme-menu-button:hover {
+	outline: 1px solid rgb(225 0 112 / 0.4);
+}
